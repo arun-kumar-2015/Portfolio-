@@ -438,8 +438,12 @@
                     </div>
                 </div>
                 
-                <form action="https://formsubmit.co/arunkumardonthula2015@gmail.com" method="POST" class="contact-form glass-card" id="contactForm">
-                    <!-- Disable Captcha optionally if desired, but let's keep it default to ensure it works -->
+                <form class="contact-form glass-card" id="contactForm">
+                    <!-- Web3Forms: no activation email needed -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+                    <input type="hidden" name="subject" value="New Portfolio Contact Message">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <div id="form-result" class="form-result" style="display:none;"></div>
                     <div class="form-group">
                         <input type="text" id="name" name="name" required placeholder=" ">
                         <label for="name">Your Name</label>
@@ -449,14 +453,14 @@
                         <label for="email">Your Email</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="_subject" required placeholder=" ">
+                        <input type="text" id="subject" name="subject_custom" required placeholder=" ">
                         <label for="subject">Subject</label>
                     </div>
                     <div class="form-group">
                         <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
                         <label for="message">Your Message</label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
                         <span>Send Message</span>
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>

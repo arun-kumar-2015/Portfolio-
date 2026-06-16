@@ -198,5 +198,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (skillsSection) skillsObserver.observe(skillsSection);
 
+    // 8. Contact Form (Web3Forms - no activation needed)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const resultDiv = document.getElementById('form-result');
+            const formData = new FormData(contactForm);
+
+            // Add the subject from the custom field
+            const subjectVal = document.getElementById('subject').value;
+            formData.set('subject', 'Portfolio Contact: ' + subjectVal);
+
+            // Button loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+
+            resultDiv.style.display = 'none';
+            resultDiv.className = 'form-result';
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    resultDiv.textContent = '✅ Message sent successfully! I will get back to you soon.';
+                    resultDiv.classList.add('form-success');
+                    resultDiv.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    resultDiv.textContent = '❌ Something went wrong. Please try again or email me directly.';
+                    resultDiv.classList.add('form-error');
+                    resultDiv.style.display = 'block';
+                }
+            } catch (error) {
+                resultDiv.textContent = '❌ Network error. Please check your connection and try again.';
+                resultDiv.classList.add('form-error');
+                resultDiv.style.display = 'block';
+            }
+
+            // Restore button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>';
+        });
+    }
 
 });
