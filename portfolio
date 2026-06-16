@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Kumar Yadav | Student Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background: #1e293b;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        header p {
+            margin-top: 8px;
+            font-size: 18px;
+        }
+        nav {
+            background: #0f172a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #1e293b;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #1e293b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #334155;
+        }
+        footer {
+            background: #0f172a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Arun Kumar Yadav</h1>
+    <p>Student | Aspiring Professional</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>I am a motivated student with a strong interest in technology, business, and self-development. I enjoy learning new skills, working in teams, and building solutions that help students and communities.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>Communication & Presentation</li>
+            <li>Leadership & Teamwork</li>
+            <li>Basics of Digital Marketing</li>
+            <li>Business Strategy (Basics)</li>
+            <li>MS Office & Google Tools</li>
+            <li>Social Media Management</li>
+        </ul>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>Educational App – Arthiv</h3>
+        <p>Role: Marketing & Business Lead</p>
+        <p>Worked on idea planning, student-focused marketing strategies, and team coordination.</p>
+    </div>
+    <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Designed and developed a simple portfolio website to showcase my profile, skills, and projects.</p>
+    </div>
+</section>
+
+<section id="resume">
+    <h2>Resume</h2>
+    <div class="card">
+        <p>You can download my resume using the button below.</p>
+        <a href="#" class="btn">Download Resume</a>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p><strong>Email:</strong> yourname@email.com</p>
+        <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Arun Kumar Yadav | Student Portfolio</p>
+</footer>
+
+</body>
+</html>
