@@ -1102,6 +1102,72 @@ img {
     gap: 0.5rem;
 }
 
+/* Featured Project Badge */
+.featured-project {
+    position: relative;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.15), var(--card-shadow);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 10;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.9rem;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Project Action Buttons */
+.project-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Contact Info Link */
+.info-link {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+    word-break: break-all;
+}
+
+.info-link:hover {
+    color: var(--primary-color);
+}
+
+.info-item i {
+    width: 40px;
+    height: 40px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
 /* Footer */
 footer {
     background: var(--bg-alt);
